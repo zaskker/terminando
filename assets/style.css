@@ -1,0 +1,432 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* por que es el tamaño del head  */
+}
+
+body {
+  width: 100vw;
+  max-width: 100%;
+  color: white;
+}
+
+:root {
+  --yellow: #efe428;
+  --gris: #3c4343;
+}
+
+.section-container {
+  background-color: var(--gris);
+}
+
+/* HEADER */
+
+.header-container {
+  position: sticky;
+  top: 0%;
+  z-index: 9999;
+}
+
+.header {
+  margin: 0 auto;
+  max-width: 1300px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 80px 0px 50px;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 80%;
+}
+
+.navbar,
+.navbar-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-list {
+  gap: 35px;
+}
+
+.navbar i {
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+#menu-gym {
+  display: none;
+}
+
+.navbar a {
+  color: white;
+  font-size: 16px;
+  transition: all 0ms;
+  position: relative;
+  font-weight: 600;
+}
+
+.navbar-list li:last-child > a {
+  border: 1px solid white;
+  font-size: 14px;
+  padding: 8px 40px;
+  border-radius: 3px;
+  transition: all 0.3s linear;
+}
+
+.navbar-list li:last-child > a:hover {
+  background-color: var(--yellow);
+  color: var(--gris);
+  transition: all 0.3s linear;
+  font-weight: 600;
+}
+
+@media (max-width: 992px) {
+  .header {
+    padding: 0px 50px 0px 10px;
+  }
+  .navbar i {
+    display: block;
+  }
+  .navbar-list {
+    position: absolute;
+    background-color: var(--gris);
+    flex-direction: column;
+    top: 100px;
+    right: 0;
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: none;
+    /* Display None */
+    z-index: 9999;
+  }
+
+  #menu-gym:checked + .navbar-list {
+    display: flex;
+  }
+}
+
+#inicio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 70px 50px;
+}
+
+.description {
+  display: flex;
+  padding: 40px;
+  gap: 400px;
+}
+
+.text {
+  max-width: max(40%, 300px);
+}
+
+.text h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 75px;
+  margin-top: 100px;
+}
+
+.text p {
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gym-img {
+  background-image: url(/assets/gimnasio.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 350px;
+  width: 30px;
+  height: 350px;
+  border-radius: 5px;
+}
+
+.description-section {
+  padding: 8rem 0;
+}
+
+.description-section h2 {
+  text-align: center;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.description-section p {
+  text-align: center;
+  font-size: 1rem;
+  max-width: 400px;
+  margin: 1rem auto 2rem auto;
+}
+
+.info-card {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.card-container {
+  display: flex;
+  gap: 1rem;
+  width: auto;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0rem;
+}
+
+.card {
+  margin-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  margin: 1rem auto 1rem auto;
+  box-shadow: 0 0 20px 5px rgb(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  padding: 3rem;
+  position: relative;
+}
+
+.card:nth-child(1) {
+  animation: floating 3s ease-in-out infinite alternate;
+}
+
+.card:nth-child(2) {
+  animation: floating 3s 0.5s ease-in-out infinite alternate;
+}
+
+.card:nth-child(3) {
+  animation: floating 3s 1s ease-in-out infinite alternate;
+}
+
+.card:nth-child(4) {
+  animation: floating 3s 1.5s ease-in-out infinite alternate;
+}
+
+.card:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+@keyframes floating {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100px);
+  }
+}
+
+/* Animaciones */
+
+.new:hover {
+  color: var(--yellow);
+}
+
+.new::after {
+  content: "";
+  height: 3px;
+  width: 100%;
+  background: var(--yellow);
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: ease 0.3s;
+}
+
+.new:hover::after {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+
+@media (max-width: 1024px) {
+  .gym-img {
+    display: none;
+  }
+
+  .img2 {
+    display: none;
+  }
+  .text h1,
+  .text p {
+    display: flex;
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding: 1rem;
+    gap: 10px;
+  }
+
+  .description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.informacion {
+  background-color: grey;
+  padding: 0px 0px 30px;
+  border-radius: 5px;
+}
+
+.img2 {
+  background-image: url(/assets/gimnasio2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 800px;
+  width: 300px;
+  height: 600px;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+
+.contacto-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0px;
+  background-color: var(--gris);
+}
+.elementos-contacto {
+  display: flex;
+  justify-content: space-between;
+  gap: 0px;
+  width: 100%;
+  color: white;
+  margin: 40px 80px;
+
+  flex-wrap: wrap;
+}
+.elementos-contacto h4 {
+  font-size: 25px;
+}
+.contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contacto i {
+  display: flex;
+  gap: 10px;
+}
+
+.contacto p {
+  font-weight: 600;
+}
+.redes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.icons {
+  display: flex;
+  gap: 20px;
+}
+.fa-brands.fa-instagram,
+.fa-brands.fa-facebook,
+.fa-brands.fa-twitter,
+.fa-brands.fa-youtube {
+  font-size: 2rem;
+  color: white;
+}
+.fa-brands.fa-instagram:hover {
+  transition: all 0.3s;
+  transform: scale(1.2);
+  color: rgb(253, 86, 44);
+}
+.fa-brands.fa-facebook:hover {
+  transition: all 0.3s;
+  transform: scale(1.2);
+  color: #3b5998;
+}
+.fa-brands.fa-twitter:hover {
+  transition: all 0.3s;
+  transform: scale(1.2);
+  color: #00acee;
+}
+.fa-brands.fa-youtube:hover {
+  transition: all 0.3s;
+  transform: scale(1.2);
+  color: rgb(225, 14, 14);
+}
+/* ACA TERMINA CONTACTO CONTAINER */
+
+/* EMPIEZA FOOTER **/
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gris);
+  border-top: 2px solid var(--yellow);
+}
+footer img {
+  width: 70px;
+}
+
+@media (max-width: 615px) {
+  /* MODIFICO CONTACTO CONTAINER */
+  .contacto {
+    justify-content: center;
+    align-items: center;
+  }
+  .elementos-contacto {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .mapa h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .mapa iframe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
