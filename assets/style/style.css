@@ -172,17 +172,6 @@ body {
   display: flex;
 }
 
-.gym-img {
-  background-image: url(/assets/gimnasio.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-width: 350px;
-  width: 30px;
-  height: 350px;
-  border-radius: 5px;
-}
-
 .gymimagen {
   overflow: hidden;
   width: 100%;
