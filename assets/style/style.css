@@ -559,3 +559,9 @@ footer img {
     width: 100%;
   }
 }
+
+@media (max-width: 1365px) {
+  .gymimagen {
+    display: none;
+  }
+}
