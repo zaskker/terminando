@@ -174,20 +174,19 @@ body {
 
 .gymimagen {
   overflow: hidden;
-  width: 80%;
+  width: 100%;
 }
 
 .gymimagen img {
   width: 600px;
   height: 450px;
-  border-radius: 20px;
 }
 
 .gymimagen ul {
   list-style: none;
   display: flex;
   align-items: center;
-  width: 500%;
+  width: 100%;
   animation: cambiamosimagen 12s infinite alternate;
 }
 
@@ -529,5 +528,34 @@ footer img {
 
   .gymimagen {
     display: none;
+  }
+}
+
+@media (max-width: 1366px) {
+  .gymimagen {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 40px;
+    margin-left: -180px;
+  }
+
+  .gymimagen img {
+    width: 450px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gymimagen ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    animation: cambiamosimagen 12s infinite alternate;
+  }
+
+  .gymimagen li {
+    width: 100%;
   }
 }
