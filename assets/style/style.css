@@ -150,6 +150,10 @@ body {
 
 .text {
   max-width: max(40%, 300px);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-left: 100px;
 }
 
 .text h1 {
@@ -166,8 +170,6 @@ body {
   font-size: 20px;
   font-weight: 500;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .gym-img {
@@ -179,6 +181,71 @@ body {
   width: 30px;
   height: 350px;
   border-radius: 5px;
+}
+
+.gymimagen {
+  overflow: hidden;
+  width: 100%;
+}
+
+.gymimagen img {
+  width: 600px;
+  height: 450px;
+  border-radius: 20px;
+}
+
+.gymimagen ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  width: 500%;
+  animation: cambiamosimagen 12s infinite alternate;
+}
+
+.gymimagen li {
+  width: 100%;
+}
+
+.gymimagen:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+@keyframes cambiamosimagen {
+  0% {
+    margin-left: 0;
+  }
+  15% {
+    margin-left: 0;
+  }
+
+  20% {
+    margin-left: -100%;
+  }
+  35% {
+    margin-left: -100%;
+  }
+
+  40% {
+    margin-left: -200%;
+  }
+  55% {
+    margin-left: -200%;
+  }
+
+  60% {
+    margin-left: -300%;
+  }
+  75% {
+    margin-left: -300%;
+  }
+
+  80% {
+    margin-left: -400%;
+  }
+  100% {
+    margin-left: -400%;
+  }
 }
 
 .description-section {
@@ -292,6 +359,9 @@ body {
   .text h1,
   .text p {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -100px;
   }
 
   .card-container {
@@ -307,6 +377,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .gymimagen {
+    display: none;
   }
 }
 
@@ -412,6 +486,12 @@ footer img {
   width: 70px;
 }
 
+@media (max-width: 360px) {
+  .card {
+    width: 330px;
+  }
+}
+
 @media (max-width: 615px) {
   /* MODIFICO CONTACTO CONTAINER */
   .contacto {
@@ -432,5 +512,33 @@ footer img {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 350px;
+  }
+
+  .gymimagen {
+    display: none;
+  }
+}
+
+@media (max-width: 280px) {
+  .mapa iframe {
+    width: 270px;
+  }
+
+  .card {
+    width: 250px;
+  }
+
+  .text h1,
+  .text p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -100px;
+    margin-top: -10px;
+  }
+
+  .gymimagen {
+    display: none;
   }
 }
