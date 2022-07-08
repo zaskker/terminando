@@ -174,7 +174,7 @@ body {
 
 .gymimagen {
   overflow: hidden;
-  width: 100%;
+  width: 80%;
 }
 
 .gymimagen img {
@@ -187,7 +187,7 @@ body {
   list-style: none;
   display: flex;
   align-items: center;
-  width: 600%;
+  width: 500%;
   animation: cambiamosimagen 12s infinite alternate;
 }
 
